@@ -15,7 +15,8 @@ public class Cliente {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
-	@ManyToOne
+    private String rpg;
+    @ManyToOne
 	private Endereco endereco;
 
 	public Long getId() {
@@ -41,5 +42,12 @@ public class Cliente {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+    public String getRpg() {
+        return rpg;
+    }
+
+    public void setRpg(String rpg) {
+        this.rpg = rpg;
+    }
 
 }
